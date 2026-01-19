@@ -3,297 +3,378 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magna Auto & Tire Center | Trusted Auto Repair in Magna, UT</title>
+    <meta name="description" content="Magna Auto & Tire Center offers honest, reliable auto repair and tire services in Magna, UT. Family-owned since 1995. Call us today!">
     
-    <!-- SEO Meta Tags -->
-    <title>Independent Tire Inc | 24/7 Truck Tire & Road Service in Magna, UT</title>
-    <meta name="description" content="Independent Tire Inc provides 24/7 mobile truck tire service, roadside assistance, and heavy-duty repair in Magna, UT. Call (801) 599-8036 for emergency service.">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts: Roboto (Headings) & Open Sans (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
 
-    <!-- Custom Config -->
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS (Configured via Script for Custom Colors) -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Roboto', 'sans-serif'],
-                        display: ['Oswald', 'sans-serif'],
-                    },
                     colors: {
-                        brand: {
-                            black: '#2D2D2D',   // Tire Black
-                            charcoal: '#333333', // Charcoal Gray
-                            yellow: '#FFCC00',  // High-Visibility Yellow
-                            red: '#D32F2F',     // Industrial Red
-                            redHover: '#b71c1c',
-                            blue: '#4682B4',    // Steel Blue
-                            darkBlue: '#274a66' // Accessible Dark Steel Blue
-                        }
+                        'mechanic-blue': '#1e3a8a',
+                        'action-red': '#dc2626',
+                        'action-red-hover': '#b91c1c',
+                        'off-white': '#F9FAFB',
+                        'dark-grey': '#111827',
+                    },
+                    fontFamily: {
+                        sans: ['Open Sans', 'sans-serif'],
+                        heading: ['Roboto', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
 
-    <!-- Schema.org JSON-LD (TireShop Specific) -->
+    <!-- LocalBusiness Schema (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "TireShop",
-      "name": "Independent Tire Inc - Truck Tire Service",
-      "image": "https://images.unsplash.com/photo-1578844251758-2f71da645217?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
-      "telephone": "+18015998036",
+      "@type": "AutoRepair",
+      "name": "Magna Auto & Tire Center",
+      "image": "https://images.unsplash.com/photo-1599474924187-334a4ae5bd3c?auto=format&fit=crop&q=80",
+      "@id": "https://magnaautotire.com",
+      "url": "https://magnaautotire.com",
+      "telephone": "+18014328201",
+      "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "7590 W Tempo Rd",
+        "streetAddress": "8400 W 3500 S",
         "addressLocality": "Magna",
         "addressRegion": "UT",
         "postalCode": "84044",
         "addressCountry": "US"
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.7",
-        "reviewCount": "54"
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.6972,
+        "longitude": -112.0833
       },
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "00:00",
-          "closes": "23:59"
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "18:00"
         }
       ],
-      "description": "Truck repair shop offering maintenance, tires, and 24/7 road service."
+      "sameAs": [
+        "https://www.facebook.com/magnaautotire"
+      ]
     }
     </script>
 </head>
-<body class="font-sans text-white antialiased bg-brand-black relative">
+<body class="bg-off-white text-dark-grey antialiased flex flex-col min-h-screen">
 
-    <!-- Accessibility: Skip to Content Link -->
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 bg-brand-yellow text-brand-black px-4 py-2 rounded-md font-bold shadow-lg ring-2 ring-white">
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:text-mechanic-blue focus:px-4 focus:py-2 focus:ring-2 focus:ring-action-red rounded-md">
         Skip to main content
     </a>
 
-    <!-- Top Navigation -->
-    <header class="bg-brand-black shadow-lg sticky top-0 z-50 border-b border-gray-700">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center">
-                    <span class="font-display font-bold text-2xl sm:text-3xl text-brand-blue uppercase tracking-tight">
-                        INDEPENDENT TIRE <span class="text-white text-sm block sm:inline sm:ml-2 tracking-widest font-sans font-normal">INC.</span>
-                    </span>
-                </div>
-                
-                <!-- Desktop Links -->
-                <nav class="hidden md:flex space-x-8 items-center" aria-label="Main Navigation">
-                    <a href="#about" class="text-gray-300 hover:text-brand-yellow font-display font-medium uppercase tracking-wide transition focus:outline-none focus:ring-2 focus:ring-brand-yellow rounded px-2">About</a>
-                    <a href="#services" class="text-gray-300 hover:text-brand-yellow font-display font-medium uppercase tracking-wide transition focus:outline-none focus:ring-2 focus:ring-brand-yellow rounded px-2">Services</a>
-                    <a href="#trust" class="text-gray-300 hover:text-brand-yellow font-display font-medium uppercase tracking-wide transition focus:outline-none focus:ring-2 focus:ring-brand-yellow rounded px-2">Why Us</a>
-                    <a href="tel:8015998036" aria-label="Call Independent Tire Inc" class="bg-brand-red text-white px-6 py-2 rounded-sm font-bold uppercase tracking-wider text-sm hover:bg-brand-redHover transition shadow-lg focus:outline-none focus:ring-2 focus:ring-white">
-                        <i class="fas fa-phone-alt mr-2" aria-hidden="true"></i> Call Now
-                    </a>
-                </nav>
-
-                <!-- Mobile Call Button -->
-                <div class="md:hidden">
-                    <a href="tel:8015998036" aria-label="Call Independent Tire Inc" class="bg-brand-red text-white w-10 h-10 rounded-sm flex items-center justify-center shadow-lg focus:outline-none focus:ring-2 focus:ring-white">
-                        <i class="fas fa-phone-alt" aria-hidden="true"></i>
-                    </a>
+    <!-- Navigation / Header -->
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo Area -->
+            <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-wrench text-action-red text-2xl" aria-hidden="true"></i>
+                <div>
+                    <h1 class="font-heading font-black text-xl md:text-2xl text-mechanic-blue leading-none tracking-tight">
+                        MAGNA AUTO
+                    </h1>
+                    <span class="text-xs text-gray-500 font-semibold tracking-wide uppercase">& Tire Center</span>
                 </div>
             </div>
+
+            <!-- Desktop Contact Info -->
+            <div class="hidden md:flex items-center space-x-6">
+                <div class="flex flex-col text-right">
+                    <span class="text-xs text-gray-500 font-semibold">Need help? Call us:</span>
+                    <a href="tel:+18014328201" class="font-heading font-bold text-lg text-dark-grey hover:text-action-red transition-colors">
+                        (801) 432-8201
+                    </a>
+                </div>
+                <a href="#appointment" class="bg-action-red hover:bg-action-red-hover text-white font-heading font-bold py-2 px-6 rounded shadow-sm transition-colors duration-200">
+                    Book Now
+                </a>
+            </div>
+
+            <!-- Mobile Call Button Icon -->
+            <a href="tel:+18014328201" class="md:hidden bg-action-red text-white p-3 rounded-full shadow-lg" aria-label="Call Magna Auto & Tire Center">
+                <i class="fa-solid fa-phone"></i>
+            </a>
         </div>
     </header>
 
-    <main id="main-content">
-        <!-- 1. Hero Section -->
-        <section class="relative bg-brand-charcoal h-[600px] flex items-center overflow-hidden" aria-labelledby="hero-heading">
-            <!-- Background Image with Steel Blue Tint -->
-            <div class="absolute inset-0 z-0">
-                <img src="https://images.unsplash.com/photo-1605218427306-022ba8c69286?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="Service truck in action at night" class="w-full h-full object-cover grayscale brightness-50">
-                <!-- Steel Blue Tint Overlay -->
-                <div class="absolute inset-0 bg-brand-blue/30 mix-blend-overlay"></div>
-                <!-- Gradient for Text Readability -->
-                <div class="absolute inset-0 bg-gradient-to-r from-brand-black/95 via-brand-black/70 to-transparent"></div>
+    <main id="main-content" class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative bg-mechanic-blue text-white">
+            <!-- Background Image with Overlay -->
+            <div class="absolute inset-0 z-0 opacity-20">
+                <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&q=80" alt="Mechanic working under a car" class="w-full h-full object-cover">
             </div>
-
-            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-                <div class="max-w-2xl">
-                    <h1 id="hero-heading" class="font-display font-bold text-5xl sm:text-6xl md:text-7xl text-brand-yellow mb-4 uppercase leading-none drop-shadow-lg">
-                        24/7 Road Service
-                    </h1>
-                    <p class="text-xl sm:text-2xl text-white mb-8 font-light border-l-4 border-brand-red pl-6">
-                        Get back on the road fast with trusted truck tire services anytime, anywhere.
+            
+            <div class="container mx-auto px-4 py-16 md:py-24 relative z-10 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="inline-block bg-action-red text-xs font-bold px-2 py-1 rounded mb-4 uppercase tracking-wider">
+                        Serving Magna Since 1995
+                    </div>
+                    <h2 class="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">
+                        Honest Repairs.<br>Fair Prices.<br>Family Values.
+                    </h2>
+                    <p class="text-gray-200 text-lg mb-8 max-w-md">
+                        We don't just fix cars; we keep our neighbors safe on the road. From diagnostics to tires, we treat your vehicle like our own.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="tel:8015998036" class="bg-brand-red text-white px-8 py-5 rounded-sm font-display font-bold text-xl uppercase tracking-wider hover:bg-brand-redHover transition text-center shadow-xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-brand-black">
-                            Call Now
+                        <a href="tel:+18014328201" class="bg-action-red hover:bg-action-red-hover text-white text-center font-heading font-bold py-3 px-8 rounded shadow-lg transition-transform transform hover:-translate-y-0.5">
+                            <i class="fa-solid fa-phone mr-2"></i> (801) 432-8201
+                        </a>
+                        <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="bg-white hover:bg-gray-100 text-mechanic-blue text-center font-heading font-bold py-3 px-8 rounded shadow-lg transition-transform transform hover:-translate-y-0.5">
+                            <i class="fa-solid fa-location-arrow mr-2"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+                <!-- Trust Badge / Image on Desktop (REMOVED) -->
+                <div class="md:w-1/2 flex justify-center md:justify-end">
+                  <!-- Image removed by request -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h3 class="font-heading font-bold text-3xl text-mechanic-blue mb-3">Complete Auto Care</h3>
+                    <p class="text-gray-600 max-w-2xl mx-auto">We use state-of-the-art diagnostic equipment to ensure your vehicle is repaired correctly the first time.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="bg-off-white p-6 rounded-lg border border-gray-100 hover:shadow-md transition-shadow group">
+                        <div class="w-12 h-12 bg-mechanic-blue rounded-full flex items-center justify-center text-white mb-4 group-hover:bg-action-red transition-colors">
+                            <i class="fa-solid fa-oil-can text-xl"></i>
+                        </div>
+                        <h4 class="font-heading font-bold text-xl text-dark-grey mb-2">Oil & Maintenance</h4>
+                        <p class="text-gray-600">Synthetic and conventional oil changes, fluid top-offs, and factory scheduled maintenance to keep your warranty valid.</p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="bg-off-white p-6 rounded-lg border border-gray-100 hover:shadow-md transition-shadow group">
+                        <div class="w-12 h-12 bg-mechanic-blue rounded-full flex items-center justify-center text-white mb-4 group-hover:bg-action-red transition-colors">
+                            <i class="fa-solid fa-car-battery text-xl"></i>
+                        </div>
+                        <h4 class="font-heading font-bold text-xl text-dark-grey mb-2">Diagnostics & Engine</h4>
+                        <p class="text-gray-600">Check engine light on? Our ASE-certified technicians diagnose issues quickly and provide honest repair estimates.</p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="bg-off-white p-6 rounded-lg border border-gray-100 hover:shadow-md transition-shadow group">
+                        <div class="w-12 h-12 bg-mechanic-blue rounded-full flex items-center justify-center text-white mb-4 group-hover:bg-action-red transition-colors">
+                            <i class="fa-solid fa-drum-steelpan text-xl"></i> <!-- closest to brake disc -->
+                        </div>
+                        <h4 class="font-heading font-bold text-xl text-dark-grey mb-2">Brakes & Rotors</h4>
+                        <p class="text-gray-600">Squeaky brakes? We offer complete brake inspections, pad replacements, and rotor resurfacing for your safety.</p>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="bg-off-white p-6 rounded-lg border border-gray-100 hover:shadow-md transition-shadow group">
+                        <div class="w-12 h-12 bg-mechanic-blue rounded-full flex items-center justify-center text-white mb-4 group-hover:bg-action-red transition-colors">
+                            <i class="fa-solid fa-dharmachakra text-xl"></i> <!-- closest to tire -->
+                        </div>
+                        <h4 class="font-heading font-bold text-xl text-dark-grey mb-2">Tires & Alignment</h4>
+                        <p class="text-gray-600">We sell major tire brands and perform precision wheel alignments to extend the life of your tires.</p>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="bg-off-white p-6 rounded-lg border border-gray-100 hover:shadow-md transition-shadow group">
+                        <div class="w-12 h-12 bg-mechanic-blue rounded-full flex items-center justify-center text-white mb-4 group-hover:bg-action-red transition-colors">
+                            <i class="fa-solid fa-snowflake text-xl"></i>
+                        </div>
+                        <h4 class="font-heading font-bold text-xl text-dark-grey mb-2">A/C & Heating</h4>
+                        <p class="text-gray-600">Stay cool in the Utah summer and warm in the winter. We fix leaks, recharge systems, and repair heater cores.</p>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="bg-off-white p-6 rounded-lg border border-gray-100 hover:shadow-md transition-shadow group">
+                        <div class="w-12 h-12 bg-mechanic-blue rounded-full flex items-center justify-center text-white mb-4 group-hover:bg-action-red transition-colors">
+                            <i class="fa-solid fa-truck-pickup text-xl"></i>
+                        </div>
+                        <h4 class="font-heading font-bold text-xl text-dark-grey mb-2">Suspension & Steering</h4>
+                        <p class="text-gray-600">Bumpy ride? We repair struts, shocks, tie rods, and power steering systems to restore your vehicle's handling.</p>
+                    </div>
+                </div>
+                
+                <div class="mt-10 text-center">
+                    <a href="tel:+18014328201" class="inline-block border-2 border-mechanic-blue text-mechanic-blue hover:bg-mechanic-blue hover:text-white font-heading font-bold py-3 px-8 rounded transition-colors duration-200">
+                        View All Services
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us / Trust Section -->
+        <section class="py-16 bg-off-white">
+            <div class="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?auto=format&fit=crop&q=80" alt="Mechanic talking to customer" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="lg:w-1/2">
+                    <h3 class="font-heading font-bold text-3xl text-mechanic-blue mb-6">Why Magna Drivers Choose Us</h3>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-action-red mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-dark-grey block">ASE Certified Technicians</strong>
+                                <span class="text-gray-600 text-sm">Our team undergoes rigorous training to stay up-to-date with modern vehicle tech.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-action-red mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-dark-grey block">24 Month / 24k Mile Warranty</strong>
+                                <span class="text-gray-600 text-sm">We stand behind our work. If it's not right, we make it right.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-action-red mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-dark-grey block">Transparent Pricing</strong>
+                                <span class="text-gray-600 text-sm">No surprise fees. We get your approval before starting any extra work.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-action-red mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-dark-grey block">Locally Owned & Operated</strong>
+                                <span class="text-gray-600 text-sm">We live here, we work here, and we support our local Magna community.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map & Contact Info (NAP) -->
+        <section id="location" class="relative">
+            <!-- Map Overlay -->
+            <div class="w-full h-96 bg-gray-300">
+                <!-- Google Maps Embed Placeholder -->
+                 <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48389.98335345719!2d-112.11584455!3d40.70588625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87528e1d244c0e43%3A0x6d92651147575225!2sMagna%2C%20UT%2084044!5e0!3m2!1sen!2sus!4v1655555555555!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Map Location of Magna Auto & Tire Center">
+                </iframe>
+            </div>
+
+            <!-- Contact Card -->
+            <div class="container mx-auto px-4 relative pointer-events-none h-0">
+                <div class="bg-mechanic-blue text-white p-8 rounded-lg shadow-2xl max-w-md absolute -top-80 lg:-top-80 lg:right-4 pointer-events-auto">
+                    <h3 class="font-heading font-bold text-2xl mb-4">Visit Us Today</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-location-dot mt-1 mr-4 text-action-red"></i>
+                            <address class="not-italic">
+                                8400 W 3500 S<br>
+                                Magna, UT 84044
+                            </address>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-phone mr-4 text-action-red"></i>
+                            <a href="tel:+18014328201" class="hover:text-gray-300 transition-colors">(801) 432-8201</a>
+                        </div>
+
+                        <div class="border-t border-blue-800 pt-4 mt-4">
+                            <h4 class="font-bold text-sm uppercase tracking-wide text-blue-300 mb-2">Hours of Operation</h4>
+                            <ul class="text-sm space-y-1">
+                                <li class="flex justify-between"><span>Mon - Fri:</span> <span>8:00 AM - 6:00 PM</span></li>
+                                <li class="flex justify-between"><span>Saturday:</span> <span>9:00 AM - 2:00 PM</span></li>
+                                <li class="flex justify-between text-action-red font-semibold"><span>Sunday:</span> <span>Closed</span></li>
+                            </ul>
+                        </div>
+                        
+                        <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="block bg-white text-mechanic-blue text-center font-bold py-3 rounded hover:bg-gray-100 transition-colors mt-6">
+                            Get Directions
                         </a>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- 2. About the Service -->
-        <section id="about" class="py-20 px-4 sm:px-6 bg-brand-charcoal border-t border-gray-800" aria-labelledby="about-heading">
-            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2">
-                    <h2 id="about-heading" class="font-display font-bold text-3xl sm:text-4xl text-brand-blue uppercase mb-6">
-                        Your Trusted Tire Service Partner
-                    </h2>
-                    <div class="text-white space-y-4 text-lg leading-relaxed">
-                        <p>
-                            When you're hauling heavy loads, downtime isn't just an inconvenience—it's lost revenue. Independent Tire Inc specializes in keeping commercial fleets moving across Magna and the Salt Lake Valley.
-                        </p>
-                        <p>
-                            Our fleet is ready for any emergency, 24/7, with commercial-grade tire solutions. Whether it's a blowout on the highway at 3 AM or routine fleet maintenance, we bring the shop to you.
-                        </p>
-                        <ul class="mt-6 space-y-3">
-                            <li class="flex items-center"><i class="fas fa-check text-brand-yellow mr-3" aria-hidden="true"></i> 24/7 Emergency Dispatch</li>
-                            <li class="flex items-center"><i class="fas fa-check text-brand-yellow mr-3" aria-hidden="true"></i> Commercial Truck Specialization</li>
-                            <li class="flex items-center"><i class="fas fa-check text-brand-yellow mr-3" aria-hidden="true"></i> Rapid Response Times</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="md:w-1/2 relative h-80 w-full">
-                     <img src="https://images.unsplash.com/photo-1580901368919-7738efb0f87e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Mechanic working on truck tire in a repair shop" class="w-full h-full object-cover rounded-sm border-4 border-brand-blue/20 shadow-2xl grayscale hover:grayscale-0 transition duration-700">
-                </div>
-            </div>
-        </section>
-
-        <!-- 3. Services Section -->
-        <section id="services" class="py-20 px-4 sm:px-6 bg-brand-black relative" aria-labelledby="services-heading">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 id="services-heading" class="font-display font-bold text-4xl text-brand-red uppercase tracking-wide">Our Services</h2>
-                    <p class="mt-4 text-gray-400 max-w-2xl mx-auto">Comprehensive solutions for heavy-duty trucking.</p>
-                </div>
-                
-                <!-- Semantic Update: Changed to UL/LI for accessibility -->
-                <ul class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Service 1 -->
-                    <li class="bg-brand-charcoal p-8 border border-gray-700 hover:border-brand-yellow transition group list-none">
-                        <div class="w-16 h-16 flex items-center justify-center mb-6" aria-hidden="true">
-                            <i class="fas fa-truck-moving text-4xl text-brand-yellow"></i>
-                        </div>
-                        <h3 class="font-display font-bold text-2xl text-white mb-3">Road Service</h3>
-                        <p class="text-gray-300">24/7 emergency road assistance for semi-trucks and trailers. We come to your location equipped to fix the problem.</p>
-                    </li>
-
-                    <!-- Service 2 -->
-                    <li class="bg-brand-charcoal p-8 border border-gray-700 hover:border-brand-yellow transition group list-none">
-                        <div class="w-16 h-16 flex items-center justify-center mb-6" aria-hidden="true">
-                            <i class="fas fa-wrench text-4xl text-brand-yellow"></i>
-                        </div>
-                        <h3 class="font-display font-bold text-2xl text-white mb-3">Tire Repair</h3>
-                        <p class="text-gray-300">Expert flat tire repair, patching, and valve service to extend the life of your commercial tires.</p>
-                    </li>
-
-                    <!-- Service 3 -->
-                    <li class="bg-brand-charcoal p-8 border border-gray-700 hover:border-brand-yellow transition group list-none">
-                        <div class="w-16 h-16 flex items-center justify-center mb-6" aria-hidden="true">
-                            <i class="fas fa-dharmachakra text-4xl text-brand-yellow"></i>
-                        </div>
-                        <h3 class="font-display font-bold text-2xl text-white mb-3">Tire Replacements</h3>
-                        <p class="text-gray-300">New and retread tire sales and installation. We carry top brands for all commercial applications.</p>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- 4. Why Choose Us / Trust Section -->
-        <!-- Contrast Fix: Changed bg-brand-blue (3.4:1 ratio with white text) to bg-brand-darkBlue (6.1:1 ratio) -->
-        <section id="trust" class="py-20 px-4 sm:px-6 bg-brand-darkBlue text-white" aria-labelledby="trust-heading">
-            <div class="max-w-7xl mx-auto text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-12">
-                <div class="md:w-2/3">
-                    <h2 id="trust-heading" class="font-display font-bold text-3xl sm:text-4xl text-white uppercase mb-6">
-                        Why Choose Independent Tire Inc?
-                    </h2>
-                    <div class="space-y-4 text-lg text-gray-200">
-                        <p>
-                            We aren't just a repair shop; we are partners in your logistics. With years of experience in the Magna area, we understand the specific needs of local truckers and cross-country haulers alike.
-                        </p>
-                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-                            <li class="flex items-center bg-black/20 p-3 rounded-sm"><i class="fas fa-star text-brand-yellow mr-3" aria-hidden="true"></i> 4.7 Star Google Rating</li>
-                            <li class="flex items-center bg-black/20 p-3 rounded-sm"><i class="fas fa-clock text-brand-yellow mr-3" aria-hidden="true"></i> Available 24 Hours</li>
-                            <li class="flex items-center bg-black/20 p-3 rounded-sm"><i class="fas fa-shield-alt text-brand-yellow mr-3" aria-hidden="true"></i> Licensed & Insured</li>
-                            <li class="flex items-center bg-black/20 p-3 rounded-sm"><i class="fas fa-map-marker-alt text-brand-yellow mr-3" aria-hidden="true"></i> Local Experts</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="md:w-1/3 text-center">
-                    <div class="bg-black/20 p-8 rounded-full h-64 w-64 flex flex-col items-center justify-center mx-auto border-4 border-white/20">
-                        <span class="block text-6xl font-display font-bold text-brand-yellow mb-2">54+</span>
-                        <span class="block text-xl font-bold uppercase tracking-widest">5-Star Reviews</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. Call to Action Section (CTA) -->
-        <section class="py-20 px-4 sm:px-6 bg-brand-red text-center relative overflow-hidden" aria-labelledby="cta-heading">
-            <!-- Diagonal Stripes Background Effect -->
-            <div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(45deg, #000 25%, transparent 25%, transparent 50%, #000 50%, #000 75%, transparent 75%, transparent); background-size: 20px 20px;" aria-hidden="true"></div>
             
-            <div class="relative z-10 max-w-4xl mx-auto">
-                <h2 id="cta-heading" class="font-display font-bold text-4xl sm:text-5xl text-white uppercase mb-8 leading-tight">
-                    Get Roadside Assistance Now!
-                </h2>
-                <p class="text-white/90 text-xl mb-10 font-medium">Don't wait. Our dispatch team is ready to take your call.</p>
-                <a href="tel:8015998036" class="inline-block bg-brand-yellow text-brand-black px-12 py-6 rounded-sm font-display font-bold text-2xl uppercase tracking-wider hover:bg-white hover:text-brand-red transition shadow-2xl focus:outline-none focus:ring-4 focus:ring-brand-black/50 transform hover:scale-105 duration-200">
-                    Call Now: (801) 599-8036
+            <!-- Spacer for mobile card overlap if needed, handled by relative positioning above -->
+        </section>
+        
+        <!-- Bottom Callout (Mobile Only) to ensure contact info is visible after map on small screens -->
+        <div class="lg:hidden bg-mechanic-blue text-white p-8">
+            <div class="container mx-auto">
+                 <h3 class="font-heading font-bold text-2xl mb-4">Visit Us Today</h3>
+                 <div class="flex items-start mb-4">
+                    <i class="fa-solid fa-location-dot mt-1 mr-4 text-action-red"></i>
+                    <address class="not-italic">
+                        8400 W 3500 S<br>
+                        Magna, UT 84044
+                    </address>
+                </div>
+                <div class="flex items-center mb-4">
+                    <i class="fa-solid fa-phone mr-4 text-action-red"></i>
+                    <a href="tel:+18014328201" class="hover:text-gray-300 transition-colors">(801) 432-8201</a>
+                </div>
+                 <div class="border-t border-blue-800 pt-4 mt-4 mb-6">
+                    <h4 class="font-bold text-sm uppercase tracking-wide text-blue-300 mb-2">Hours of Operation</h4>
+                    <ul class="text-sm space-y-1">
+                        <li class="flex justify-between"><span>Mon - Fri:</span> <span>8:00 AM - 6:00 PM</span></li>
+                        <li class="flex justify-between"><span>Saturday:</span> <span>9:00 AM - 2:00 PM</span></li>
+                        <li class="flex justify-between text-red-300 font-semibold"><span>Sunday:</span> <span>Closed</span></li>
+                    </ul>
+                </div>
+                 <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="block bg-white text-mechanic-blue text-center font-bold py-3 rounded hover:bg-gray-100 transition-colors">
+                    Get Directions
                 </a>
             </div>
-        </section>
-
-        <!-- 6. Footer Section -->
-        <section id="location" class="py-0" aria-label="Interactive Map">
-            <!-- Embed Map Full Width -->
-            <div class="w-full h-80 bg-gray-300">
-                 <iframe 
-                    title="Map location of Independent Tire Inc in Magna, UT"
-                    class="w-full h-full grayscale invert-[.85] contrast-125 hover:filter-none transition-all duration-500"
-                    frameborder="0" 
-                    scrolling="no" 
-                    marginheight="0" 
-                    marginwidth="0" 
-                    src="https://maps.google.com/maps?q=7590+W+Tempo+Rd,+Magna,+UT+84044&t=&z=15&ie=UTF8&iwloc=&output=embed">
-                </iframe>
-            </div>
-        </section>
-
-        <footer class="bg-brand-black text-white py-12 px-4 border-t border-gray-800">
-            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="text-center md:text-left">
-                    <p class="font-display font-bold text-2xl text-brand-blue uppercase tracking-tight mb-2">Independent Tire Inc</p>
-                    <p class="text-gray-400 text-sm">Truck Tire Service & Repair.</p>
-                </div>
-                
-                <div class="text-center md:text-right">
-                    <address class="not-italic text-gray-300 text-sm mb-4">
-                        7590 W Tempo Rd, Magna, UT 84044
-                    </address>
-                    <!-- Contrast Fix: Lightened links to gray-300 for readability against black -->
-                    <div class="flex gap-6 justify-center md:justify-end text-sm text-gray-300">
-                        <a href="#" class="hover:text-white transition focus:outline-none focus:underline">Privacy Policy</a>
-                        <a href="#" class="hover:text-white transition focus:outline-none focus:underline">Terms of Service</a>
-                    </div>
-                </div>
-            </div>
-            <div class="max-w-7xl mx-auto mt-8 pt-8 border-t border-gray-800 text-center text-xs text-gray-500">
-                <p>&copy; 2024 Independent Tire Inc. All Rights Reserved.</p>
-            </div>
-        </footer>
+        </div>
 
     </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-grey text-gray-400 py-10 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center text-sm">
+                <div class="mb-4 md:mb-0 text-center md:text-left">
+                    <p class="text-white font-bold mb-1">Magna Auto & Tire Center</p>
+                    <p>8400 W 3500 S, Magna, UT 84044</p>
+                </div>
+                <div class="flex space-x-6 mb-4 md:mb-0">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+                <div>
+                    <p>&copy; 2026 Magna Auto & Tire Center. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
